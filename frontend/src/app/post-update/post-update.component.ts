@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BlogService } from '../blog.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-post-update',
+  standalone: true,
+  imports: [FormsModule],
   templateUrl: './post-update.component.html',
   styleUrls: ['./post-update.component.css']
 })

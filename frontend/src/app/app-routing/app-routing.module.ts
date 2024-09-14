@@ -5,7 +5,7 @@ import { PostDetailComponent } from '../post-detail/post-detail.component';
 import { PostCreateComponent } from '../post-create/post-create.component';
 import { PostUpdateComponent } from '../post-update/post-update.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', redirectTo: '/posts', pathMatch: 'full' },
   { path: 'posts', component: PostListComponent },
   { path: 'post/:id', component: PostDetailComponent },
