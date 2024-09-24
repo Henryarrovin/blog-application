@@ -1,0 +1,14 @@
+<h2>Create New Post</h2>
+<form (ngSubmit)="createPost()">
+  <label for="title">Title:</label>
+  <input id="title" [(ngModel)]="post.title" name="title" required>
+  
+  <label for="content">Content:</label>
+  <textarea id="content" [(ngModel)]="post.content" name="content" required></textarea>
+
+  <label for="author">Author:</label>
+  <input id="author" [(ngModel)]="post.author" name="author" required>
+  
+  <button type="submit">Create Post</button>
+</form>
+<a routerLink="/posts">Back to Posts</a>
