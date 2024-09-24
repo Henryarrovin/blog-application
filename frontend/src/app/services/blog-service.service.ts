@@ -8,25 +8,25 @@ import { Observable } from 'rxjs';
 export class BlogService {
   private baseUrl = 'http://localhost:8086/api';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getAllPosts(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/getAllPosts`);
+  getAllPosts(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/getAllPosts`);
   }
 
   getPostById(id: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}/getPostById/${id}`);
+    return this.http.get<any>(`${this.baseUrl}/getPostById/${id}`);
   }
 
   createPost(post: any): Observable<any> {
-    return this.http.post(`${this.baseUrl}/createPost`, post);
+    return this.http.post<any>(`${this.baseUrl}/createPost`, post);
   }
 
   updatePost(id: string, post: any): Observable<any> {
-    return this.http.put(`${this.baseUrl}/updatePost/${id}`, post);
+    return this.http.put<any>(`${this.baseUrl}/updatePost/${id}`, post);
   }
 
   deletePost(id: string): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/deletePost/${id}`);
+    return this.http.delete<any>(`${this.baseUrl}/deletePost/${id}`);
   }
 }
