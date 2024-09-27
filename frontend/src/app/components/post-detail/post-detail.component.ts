@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from '../../services/blog-service.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-post-detail',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './post-detail.component.html',
   styleUrl: './post-detail.component.css'
 })
