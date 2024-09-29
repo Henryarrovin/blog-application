@@ -1,14 +1,26 @@
-<h2>Create New Post</h2>
-<form (ngSubmit)="createPost()">
-  <label for="title">Title:</label>
-  <input id="title" [(ngModel)]="post.title" name="title" required>
-  
-  <label for="content">Content:</label>
-  <textarea id="content" [(ngModel)]="post.content" name="content" required></textarea>
+<div class="container my-5">
+  <div class="card shadow-lg">
+    <div class="card-body">
+      <h2 class="text-center mb-4">Create New Post</h2>
+      <form (ngSubmit)="createPost()">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input id="title" [(ngModel)]="post.title" name="title" class="form-control" placeholder="Enter post title" required>
+        </div>
 
-  <label for="author">Author:</label>
-  <input id="author" [(ngModel)]="post.author" name="author" required>
-  
-  <button type="submit">Create Post</button>
-</form>
-<a routerLink="/posts">Back to Posts</a>
+        <div class="mb-3">
+          <label for="content" class="form-label">Content</label>
+          <textarea id="content" [(ngModel)]="post.content" name="content" class="form-control" rows="4" placeholder="Write your content here..." required></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="author" class="form-label">Author</label>
+          <input id="author" [(ngModel)]="post.author" name="author" class="form-control" placeholder="Author name" required>
+        </div>
+
+        <button type="submit" class="btn btn-success">Create Post</button>
+        <a routerLink="/posts" class="btn btn-secondary ms-3">Back to Posts</a>
+      </form>
+    </div>
+  </div>
+</div>

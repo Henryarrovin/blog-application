@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 900px;
+}
+
+.btn {
+  min-width: 150px;
+}
+
+textarea {
+  resize: none;
+}
